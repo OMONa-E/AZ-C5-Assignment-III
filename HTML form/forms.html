@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Understanding Form</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link href='https://fonts.googleapis.com/css?family=Aldrich' rel='stylesheet'/>
+    <style>
+        body {
+            font-family: 'Aldrich';
+            margin: auto;
+            max-width: max-content;
+            padding-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <!-- main item goes here -->`
+    <main>
+        <form action="" method="get">
+            <!-- User identity -->
+            <fieldset>
+                <legend>Bio Data</legend>
+
+                <label for="fullname">Fullname <span>&ast;</span></label><br>
+                <input type="text" name="fullname" id="fullname" placeholder="Joe Doe" required><br>
+
+                <label for="age">Age <span>&#42;</span></label><br>
+                <input type="date" name="age" id="age" min="1904-01-01"><br>
+
+                <label for="email">Email <span>(optional)</span></label><br>
+                <input type="email" name="email" id="email" placeholder="joedoe@gmail.com"><br>
+
+                <label for="contact">Phone Number <span>&ast;</span></label><br>
+                <input type="tel" name="contact" id="contact" pattern="+256[0-9]{9}" placeholder="+256772478000" minlength="10" maxlength="13"><br>
+                <small>Format:+256772478000</small><br>
+
+                <label for="country">Country <span>&ast;</span></label><br>
+                <select name="country" id="country" required>
+                    <option value="">--please select your country--</option>
+                    <option value="Egypt">Egypt</option>
+                    <option value="Ghana">Ghana</option>                    
+                    <option value="Kenya">Kenya</option>                    
+                    <option value="Nigeria">Nigeria</option>
+                    <option value="South Africa">South Africa</option>
+                    <option value="Uganda">Uganda</option>
+                </select>
+            </fieldset>
+
+            <!-- User interest -->
+            <fieldset>
+                <legend>Interest</legend>
+
+                <p>Gender</p>
+                <input type="radio" name="gender" id="male">
+                <label for="male">Male</label><br>
+                <input type="radio" name="gender" id="female">
+                <label for="female">Female</label><br>
+                
+                <p>Hobbies</p>
+                <input type="checkbox" name="reading" id="reading">
+                <label for="reading">Reading</label><br>
+                <input type="checkbox" name="sports" id="sports">
+                <label for="sports">Sports</label><br>
+                <input type="checkbox" name="music" id="music">
+                <label for="music">Music</label><br>
+                <input type="checkbox" name="travel" id="travel">
+                <label for="travel">Travel</label><br>
+                <input type="checkbox" name="movies" id="movies">
+                <label for="movies">Movies</label><br>
+                <input type="checkbox" name="comedy" id="comedy">
+                <label for="comedy">Comedy</label><br>                
+            </fieldset>
+
+            <!-- Feedback -->
+            <fieldset>
+                <legend>Comments</legend>
+                <textarea name="comments" id="comments" cols="50" rows="10" placeholder="--please type your comment--"></textarea>
+                <p>Or upload your comment file</p>
+                <input type="file" name="comments" id="comment">
+            </fieldset> <br>
+
+            <div style="text-align: center;">
+                <button style="background-color: rgb(31, 137, 236); color: white; border-radius: 1px; border: 1px;" type="submit" name="submit" id="submit">Submit</button>
+            </div>
+            
+        </form>        
+    </main>
+</body>
+</html>
